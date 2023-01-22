@@ -1,0 +1,90 @@
+html{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: gray;
+}
+
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 192px;
+
+    width: 100vw;
+    height: 100vh;
+}
+
+.container1{
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}
+
+#timer{
+    display: flex;
+    gap: 8px;
+    line-height: 96px;
+    font-size: 150px;
+}
+
+#controls{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 40px;
+}
+
+
+button {
+    background-color: transparent;
+    border: none;
+    width: 48px;
+    height: 48px;
+    cursor: pointer;
+
+    transition: transform .5s ease;
+}
+
+button:hover{
+    transform: scale(1.1);
+}
+
+#menu{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+}
+
+.forest, .rain, .coffe_shopp, .fireplace{
+    background-color: #E1E1E6;
+    border-radius: 24px;
+    width: 138px;
+    height: 152px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: transform .5s ease;
+}
+
+.forest:hover, .rain:hover, .coffe_shopp:hover, .fireplace:hover{
+    background-color: #02799D;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+#menu img{
+    width: 48px;
+    height: auto;
+}
+
+.hide{
+    display: none;
+}
+
+
