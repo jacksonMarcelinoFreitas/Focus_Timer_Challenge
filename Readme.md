@@ -4,7 +4,7 @@
 
 <p style="align: center">
     <a href="https://jacksonmarcelinofreitas.github.io/Focus_Timer_Challenge/">
-        <img src="https://github.com/jacksonMarcelinoFreitas/Focus_Timer_Challenge/blob/master/assets/cover.png" alt="Button to see the project" style="width:250px;">
+        <img src="https://github.com/jacksonMarcelinoFreitas/Focus_Timer_Challenge/blob/master/assets/button_to_see.png" alt="Button to see the project" style="width:250px;">
     </a>
 </p>
 
