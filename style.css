@@ -1,11 +1,11 @@
-html{
-    padding: 0;
+*{
     margin: 0;
+    padding: 0;
 }
 
 body{
     font-family: 'Roboto', sans-serif;
-    background-color: gray;
+    background-color: #E5E5E5;
 }
 
 main{
@@ -15,10 +15,16 @@ main{
     gap: 192px;
 
     width: 100vw;
-    height: 100vh;
+    height: 92vh;
 }
 
-.container1{
+body > div{
+    position: fixed;
+    right: 60px;
+    top: 60px;
+}
+
+.wrapper{
     display: flex;
     flex-direction: column;
     gap: 48px;
@@ -38,6 +44,9 @@ main{
     gap: 40px;
 }
 
+svg{
+    fill: #323238;
+}
 
 button {
     background-color: transparent;
@@ -60,13 +69,15 @@ button:hover{
 }
 
 .forest, .rain, .coffe_shopp, .fireplace{
-    background-color: #E1E1E6;
+    background-color: #c0c0c3;
     border-radius: 24px;
     width: 138px;
     height: 152px;
 
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    gap: 8px;
+    justify-content: space-around;
     align-items: center;
 
     transition: transform .5s ease;
@@ -78,13 +89,157 @@ button:hover{
     cursor: pointer;
 }
 
+#menu svg:hover{
+    fill: #323238;
+}
+
 #menu img{
+    padding-top: 24px;
     width: 48px;
     height: auto;
+}
+
+#menu input{
+   margin-bottom: 16px;
 }
 
 .hide{
     display: none;
 }
 
+footer {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    background-color: #c0c0c3;
+    width: 100vw;
+    height: 8vh;
+    position: relative;
+}
 
+footer p{
+    font-family: 'Bebas Neue', cursive;
+    color: #6b6b70;
+    font-weight: 600;
+    font-size: 24px;
+    letter-spacing: 1px;
+}
+
+/* ---- */
+
+input[type=range] {
+    /*removes default webkit styles*/
+    -webkit-appearance: none;
+    
+    /*fix for FF unable to apply focus style bug */
+    border-radius: 50%;
+    
+    /*required for proper track sizing in FF*/
+    width: 75%;
+}
+input[type=range]::-webkit-slider-runnable-track {
+    width: 80%;
+    height: 4px;
+    background: rgb(59, 59, 59);
+    border: none;
+    border-radius: 3px;
+}
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: #6a6c6d;
+    margin-top: -6px;
+}
+input[type=range]:focus {
+    outline: none;
+}
+input[type=range]:focus::-webkit-slider-runnable-track {
+    background: rgb(118, 170, 192);
+}
+
+input[type=range]::-moz-range-track {
+    width: 80%;
+    height: 5px;
+    background: #ddd;
+    border: none;
+    border-radius: 3px;
+}
+input[type=range]::-moz-range-thumb {
+    border: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: goldenrod;
+}
+
+/*hide the outline behind the border*/
+input[type=range]:-moz-focusring{
+    outline: 1px solid white;
+    outline-offset: -1px;
+}
+
+input[type=range]::-ms-track {
+    width: 300px;
+    height: 5px;
+    
+    /*remove bg colour from the track, we'll use ms-fill-lower and ms-fill-upper instead */
+    background: transparent;
+    
+    /*leave room for the larger thumb to overflow with a transparent border */
+    border-color: transparent;
+    border-width: 6px 0;
+
+    /*remove default tick marks*/
+    color: transparent;
+}
+input[type=range]::-ms-fill-lower {
+    background: #777;
+    border-radius: 10px;
+}
+input[type=range]::-ms-fill-upper {
+    background: #ddd;
+    border-radius: 10px;
+}
+input[type=range]::-ms-thumb {
+    border: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: goldenrod;
+}
+input[type=range]:focus::-ms-fill-lower {
+    background: #888;
+}
+
+/* Dark Mode */
+.dark{
+    background-color: #121214;
+    color: #FFFFFF;
+}
+
+.dark svg{
+    fill: #C4C4CC;
+}
+
+.dark #menu div{
+    background-color: #29292E;
+}
+
+.dark #menu div:hover{
+    background-color: #0A3442;
+}
+
+.dark footer{
+    background-color: #29292E;
+}
+
+
+
+/* 
+quebrar layoult quando em telas pequenas
+diminuir a proporcao
+deixar footer responsivo  
+*/
